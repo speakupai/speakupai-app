@@ -1,0 +1,1468 @@
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "proxima-nova-soft", sans-serif;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+body .vertical-centered-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+body .vertical-centered-box:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+body .vertical-centered-box .content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 0;
+}
+* {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+body {
+  background: #2c2d44;
+}
+.loader-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  margin-left: -60px;
+  margin-top: -60px;
+}
+.loader-line-mask {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -60px;
+  overflow: hidden;
+  -webkit-transform-origin: 60px 60px;
+  -moz-transform-origin: 60px 60px;
+  -ms-transform-origin: 60px 60px;
+  -o-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+  -webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+  -webkit-animation: rotate 1.2s infinite linear;
+  -moz-animation: rotate 1.2s infinite linear;
+  -o-animation: rotate 1.2s infinite linear;
+  animation: rotate 1.2s infinite linear;
+}
+.loader-line-mask .loader-line {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+#particles-background,
+#particles-foreground {
+  left: -51%;
+  top: -51%;
+  width: 202%;
+  height: 202%;
+  -webkit-transform: scale3d(0.5, 0.5, 1);
+  -moz-transform: scale3d(0.5, 0.5, 1);
+  -ms-transform: scale3d(0.5, 0.5, 1);
+  -o-transform: scale3d(0.5, 0.5, 1);
+  transform: scale3d(0.5, 0.5, 1);
+}
+#particles-background {
+  background: #2c2d44;
+  background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes rotate{ 0% { -webkit-transform: rotate(0deg);} 100% { -webkit-transform: rotate(360deg);}}
+@-moz-keyframes rotate{ 0% { -moz-transform: rotate(0deg);} 100% { -moz-transform: rotate(360deg);}}
+@-o-keyframes rotate{ 0% { -o-transform: rotate(0deg);} 100% { -o-transform: rotate(360deg);}}
+@keyframes rotate{ 0% {-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);} 100% {-webkit-transform: rotate(360deg);-moz-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}}
+[not-existing] {
+  zoom: 1;
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes fade{ 0% { opacity: 1;} 50% { opacity: 0.25;}}
+@-moz-keyframes fade{ 0% { opacity: 1;} 50% { opacity: 0.25;}}
+@-o-keyframes fade{ 0% { opacity: 1;} 50% { opacity: 0.25;}}
+@keyframes fade{ 0% { opacity: 1;} 50% { opacity: 0.25;}}
+[not-existing] {
+  zoom: 1;
+}
+lesshat-selector {
+  -lh-property: 0; } 
+@-webkit-keyframes fade-in{ 0% { opacity: 0;} 100% { opacity: 1;}}
+@-moz-keyframes fade-in{ 0% { opacity: 0;} 100% { opacity: 1;}}
+@-o-keyframes fade-in{ 0% { opacity: 0;} 100% { opacity: 1;}}
+@keyframes fade-in{ 0% { opacity: 0;} 100% { opacity: 1;}}
+[not-existing] {
+  zoom: 1;
+}
+
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to top, #4F6072, #8699AA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload {
+  position: relative;
+  width: 32%;
+  min-height: 425px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+  background: #fff;
+  -webkit-animation: fadeup 0.5s 0.5s ease both;
+          animation: fadeup 0.5s 0.5s ease both;
+  transform: translateY(20px);
+  opacity: 0;
+}
+.upload .upload-files header {
+  background: #4db6ac;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+}
+.upload .upload-files header p {
+  color: #fff;
+  font-size: 40px;
+  margin: 0;
+  padding: 50px 0;
+}
+.upload .upload-files header p i {
+  transform: translateY(20px);
+  opacity: 0;
+  font-size: 30px;
+  -webkit-animation: fadeup 0.5s 1s ease both;
+          animation: fadeup 0.5s 1s ease both;
+}
+.upload .upload-files header p .up {
+  font-weight: bold;
+  transform: translateX(-20px);
+  display: inline-block;
+  opacity: 0;
+  -webkit-animation: faderight 0.5s 1.5s ease both;
+          animation: faderight 0.5s 1.5s ease both;
+}
+.upload .upload-files header p .load {
+  display: inline-block;
+  font-weight: 100;
+  margin-left: -8px;
+  transform: translateX(-20px);
+  opacity: 0;
+  -webkit-animation: faderight 1s 1.5s ease both;
+          animation: faderight 1s 1.5s ease both;
+}
+.upload .upload-files .body {
+  text-align: center;
+  padding: 50px 0;
+  padding-bottom: 30px;
+}
+.upload .upload-files .body.hidden {
+  display: none;
+}
+.upload .upload-files .body input {
+  visibility: hidden;
+}
+.upload .upload-files .body i {
+  font-size: 65px;
+  color: lightgray;
+}
+.upload .upload-files .body p {
+  font-size: 16px;
+  padding-top: 15px;
+  line-height: 1.4;
+}
+.upload .upload-files .body p b,
+.upload .upload-files .body p a {
+  color: #4db6ac;
+}
+.upload .upload-files .body.active {
+  border: dashed 2px #4db6ac;
+}
+.upload .upload-files .body.active i {
+  box-shadow: 0 0 0 -3px #fff, 0 0 0 lightgray, 0 0 0 -3px #fff, 0 0 0 lightgray;
+  -webkit-animation: file 0.5s ease both;
+          animation: file 0.5s ease both;
+}
+@-webkit-keyframes file {
+  50% {
+    box-shadow: -8px 8px 0 -3px #fff, -8px 8px 0 lightgray, -8px 8px 0 -3px #fff, -8px 8px 0 lightgray;
+  }
+  75%, 100% {
+    box-shadow: -8px 8px 0 -3px #fff, -8px 8px 0 lightgray, -16px 16px 0 -3px #fff, -16px 16px 0 lightgray;
+  }
+}
+@keyframes file {
+  50% {
+    box-shadow: -8px 8px 0 -3px #fff, -8px 8px 0 lightgray, -8px 8px 0 -3px #fff, -8px 8px 0 lightgray;
+  }
+  75%, 100% {
+    box-shadow: -8px 8px 0 -3px #fff, -8px 8px 0 lightgray, -16px 16px 0 -3px #fff, -16px 16px 0 lightgray;
+  }
+}
+.upload .upload-files .body.active .pointer-none {
+  pointer-events: none;
+}
+.upload .upload-files footer {
+  width: 100%;
+  margin: 0 auto;
+  height: 0;
+}
+.upload .upload-files footer .divider {
+  margin: 0 auto;
+  width: 0;
+  border-top: solid 4px #46aba1;
+  text-align: center;
+  overflow: hidden;
+  transition: width 0.6s ease;
+}
+.upload .upload-files footer .divider span {
+  display: inline-block;
+  transform: translateY(-25px);
+  font-size: 15px;
+  padding-top: 8px;
+  font-weight: bold;
+}
+.upload .upload-files footer.hasFiles {
+  height: auto;
+}
+.upload .upload-files footer.hasFiles .divider {
+  width: 100%;
+}
+.upload .upload-files footer.hasFiles .divider span {
+  transform: translateY(0);
+  transition: transform 0.5s 0.5s ease;
+  position:absolute;
+  margin:auto;
+}
+.upload .upload-files footer.hasFiles .divider audio {
+  position: relative;
+  margin-top: 5%;
+}
+
+.upload .upload-files footer .btn-container {
+  text-align: center;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.upload .upload-files footer .importar, .predict {
+  display:inline-block;
+  outline: none;
+  border: solid 1px #4db6ac;
+  color: #4db6ac;
+  background: transparent;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-family: Roboto;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(15px);
+  opacity: 0;
+  visibility: hidden;
+}
+.upload .upload-files footer .importar.active, .predict.active{
+  transition: transform 0.2s 0.5s ease, opacity 0.2s 0.5s ease, background;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.upload .upload-files footer .importar:hover, .predict:hover {
+  background: #4db6ac;
+  color: #fff;
+}
+@-webkit-keyframes fadeup {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeup {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes faderight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes faderight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 400px) {
+  .upload {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.upload .upload-files footer .loading {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 10%;
+  text-align: center;
+  margin: auto;
+  width: 112px;
+  height: 70px;
+  *zoom: 1;
+  visibility: collapse;
+}
+
+.upload .upload-files footer .loading span{
+  margin-top: 1%;
+  display: inline-block;
+  transform: translateY(-25px);
+  font-size: 12px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.upload .upload-files footer .loading:before, .loading:after {
+  display: table;
+  content: "";
+}
+.upload .upload-files footer .loading:after {
+  clear: both;
+}
+.upload .upload-files footer .loading .finger {
+  float: left;
+  margin: 0 2px 0 0;
+  width: 20px;
+  height: 100%;
+}
+.upload .upload-files footer .loading .finger-1 {
+  -webkit-animation: finger-1-animation 0.7s infinite ease-out;
+  animation: finger-1-animation 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-1 span {
+  -webkit-animation: finger-1-animation-span 0.7s infinite ease-out;
+  animation: finger-1-animation-span 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-1 i {
+  -webkit-animation: finger-1-animation-i 0.7s infinite ease-out;
+  animation: finger-1-animation-i 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-2 {
+  -webkit-animation: finger-2-animation 0.7s infinite ease-out;
+  animation: finger-2-animation 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-2 span {
+  -webkit-animation: finger-2-animation-span 0.7s infinite ease-out;
+  animation: finger-2-animation-span 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-2 i {
+  -webkit-animation: finger-2-animation-i 0.7s infinite ease-out;
+  animation: finger-2-animation-i 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-3 {
+  -webkit-animation: finger-3-animation 0.7s infinite ease-out;
+  animation: finger-3-animation 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-3 span {
+  -webkit-animation: finger-3-animation-span 0.7s infinite ease-out;
+  animation: finger-3-animation-span 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-3 i {
+  -webkit-animation: finger-3-animation-i 0.7s infinite ease-out;
+  animation: finger-3-animation-i 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-4 {
+  -webkit-animation: finger-4-animation 0.7s infinite ease-out;
+  animation: finger-4-animation 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-4 span {
+  -webkit-animation: finger-4-animation-span 0.7s infinite ease-out;
+  animation: finger-4-animation-span 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-4 i {
+  -webkit-animation: finger-4-animation-i 0.7s infinite ease-out;
+  animation: finger-4-animation-i 0.7s infinite ease-out;
+}
+.upload .upload-files footer .loading .finger-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 6px 6px 8px 8px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px 6px 8px 8px;
+  -moz-background-clip: padding;
+  border-radius: 6px 6px 8px 8px;
+  background-clip: padding-box;
+  background: #4492f4;
+}
+.upload .upload-files footer .loading .finger-item span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 5px 5px 0 5px;
+}
+.upload .upload-files footer .loading .finger-item i {
+  position: absolute;
+  left: 3px;
+  bottom: 3px;
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 10px 10px 7px 7px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px 10px 7px 7px;
+  -moz-background-clip: padding;
+  border-radius: 10px 10px 7px 7px;
+  background-clip: padding-box;
+  background: #fff;
+}
+.upload .upload-files footer .loading .last-finger {
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 100%;
+  overflow: hidden;
+}
+.upload .upload-files footer .loading .last-finger-item {
+  position: absolute;
+  right: 0;
+  top: 32px;
+  width: 110%;
+  height: 20px;
+  -webkit-border-radius: 0 5px 14px 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 5px 14px 0;
+  -moz-background-clip: padding;
+  border-radius: 0 5px 14px 0;
+  background-clip: padding-box;
+  background: #4492f4;
+  -webkit-animation: finger-5-animation 0.7s infinite linear;
+  animation: finger-5-animation 0.7s infinite linear;
+}
+.upload .upload-files footer .loading .last-finger-item i {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 22px;
+  height: 8px;
+  background: #4492f4;
+  overflow: hidden;
+}
+.upload .upload-files footer .loading .last-finger-item i:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34px;
+  height: 20px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0 0 15px 15px;
+  -moz-background-clip: padding;
+  border-radius: 0 0 15px 15px;
+  background-clip: padding-box;
+  background: #fff;
+}
+@-webkit-keyframes finger-1-animation {
+  0% {
+    padding: 12px 0 5px 0;
+  }
+  20% {
+    padding: 12px 0 5px 0;
+  }
+  29% {
+    padding: 4px 0 24px 0;
+  }
+  35% {
+    padding: 4px 0 24px 0;
+  }
+  41% {
+    padding: 12px 0 5px 0;
+  }
+  100% {
+    padding: 12px 0 5px 0;
+  }
+}
+@keyframes finger-1-animation {
+  0% {
+    padding: 12px 0 5px 0;
+  }
+  20% {
+    padding: 12px 0 5px 0;
+  }
+  29% {
+    padding: 4px 0 24px 0;
+  }
+  35% {
+    padding: 4px 0 24px 0;
+  }
+  41% {
+    padding: 12px 0 5px 0;
+  }
+  100% {
+    padding: 12px 0 5px 0;
+  }
+}
+@-webkit-keyframes finger-1-animation-span {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  29% {
+    top: -7px;
+  }
+  35% {
+    top: -7px;
+  }
+  41% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes finger-1-animation-span {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  29% {
+    top: -7px;
+  }
+  35% {
+    top: -7px;
+  }
+  41% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes finger-1-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  20% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  29% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  35% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  41% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@keyframes finger-1-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  20% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  29% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  35% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  41% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@-webkit-keyframes finger-2-animation {
+  0% {
+    padding: 6px 0 2px 0;
+  }
+  24% {
+    padding: 6px 0 2px 0;
+  }
+  33% {
+    padding: 2px 0 16px 0;
+  }
+  39% {
+    padding: 2px 0 16px 0;
+  }
+  45% {
+    padding: 6px 0 2px 0;
+  }
+  100% {
+    padding: 6px 0 2px 0;
+  }
+}
+@keyframes finger-2-animation {
+  0% {
+    padding: 6px 0 2px 0;
+  }
+  24% {
+    padding: 6px 0 2px 0;
+  }
+  33% {
+    padding: 2px 0 16px 0;
+  }
+  39% {
+    padding: 2px 0 16px 0;
+  }
+  45% {
+    padding: 6px 0 2px 0;
+  }
+  100% {
+    padding: 6px 0 2px 0;
+  }
+}
+@-webkit-keyframes finger-2-animation-span {
+  0% {
+    top: 0;
+  }
+  24% {
+    top: 0;
+  }
+  33% {
+    top: -7px;
+  }
+  39% {
+    top: -7px;
+  }
+  45% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes finger-2-animation-span {
+  0% {
+    top: 0;
+  }
+  24% {
+    top: 0;
+  }
+  33% {
+    top: -7px;
+  }
+  39% {
+    top: -7px;
+  }
+  45% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes finger-2-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  24% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  33% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  39% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  45% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@keyframes finger-2-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  24% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  33% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  39% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  45% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@-webkit-keyframes finger-3-animation {
+  0% {
+    padding: 0 0 0 0;
+  }
+  28% {
+    padding: 0 0 0 0;
+  }
+  37% {
+    padding: 0 0 12px 0;
+  }
+  43% {
+    padding: 0 0 12px 0;
+  }
+  49% {
+    padding: 0 0 0 0;
+  }
+  100% {
+    padding: 0 0 0 0;
+  }
+}
+@keyframes finger-3-animation {
+  0% {
+    padding: 0 0 0 0;
+  }
+  28% {
+    padding: 0 0 0 0;
+  }
+  37% {
+    padding: 0 0 12px 0;
+  }
+  43% {
+    padding: 0 0 12px 0;
+  }
+  49% {
+    padding: 0 0 0 0;
+  }
+  100% {
+    padding: 0 0 0 0;
+  }
+}
+@-webkit-keyframes finger-3-animation-span {
+  0% {
+    top: 0;
+  }
+  28% {
+    top: 0;
+  }
+  37% {
+    top: -7px;
+  }
+  43% {
+    top: -7px;
+  }
+  49% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes finger-3-animation-span {
+  0% {
+    top: 0;
+  }
+  28% {
+    top: 0;
+  }
+  37% {
+    top: -7px;
+  }
+  43% {
+    top: -7px;
+  }
+  49% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes finger-3-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  28% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  37% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  43% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  49% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@keyframes finger-3-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  28% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  37% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  43% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  49% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@-webkit-keyframes finger-4-animation {
+  0% {
+    padding: 8px 0 3px 0;
+  }
+  32% {
+    padding: 8px 0 3px 0;
+  }
+  41% {
+    padding: 4px 0 20px 0;
+  }
+  47% {
+    padding: 4px 0 20px 0;
+  }
+  53% {
+    padding: 8px 0 3px 0;
+  }
+  100% {
+    padding: 8px 0 3px 0;
+  }
+}
+@keyframes finger-4-animation {
+  0% {
+    padding: 8px 0 3px 0;
+  }
+  32% {
+    padding: 8px 0 3px 0;
+  }
+  41% {
+    padding: 4px 0 20px 0;
+  }
+  47% {
+    padding: 4px 0 20px 0;
+  }
+  53% {
+    padding: 8px 0 3px 0;
+  }
+  100% {
+    padding: 8px 0 3px 0;
+  }
+}
+@-webkit-keyframes finger-4-animation-span {
+  0% {
+    top: 0;
+  }
+  32% {
+    top: 0;
+  }
+  41% {
+    top: -7px;
+  }
+  47% {
+    top: -7px;
+  }
+  53% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes finger-4-animation-span {
+  0% {
+    top: 0;
+  }
+  32% {
+    top: 0;
+  }
+  41% {
+    top: -7px;
+  }
+  47% {
+    top: -7px;
+  }
+  53% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes finger-4-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  32% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  41% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  47% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  53% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@keyframes finger-4-animation-i {
+  0% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  32% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  41% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  47% {
+    bottom: 8px;
+    height: 12px;
+    -webkit-border-radius: 7px 7px 4px 4px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 7px 7px 4px 4px;
+    -moz-background-clip: padding;
+    border-radius: 7px 7px 4px 4px;
+    background-clip: padding-box;
+  }
+  53% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+  100% {
+    bottom: 3px;
+    height: 14px;
+    -webkit-border-radius: 10px 10px 7px 7px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px 10px 7px 7px;
+    -moz-background-clip: padding;
+    border-radius: 10px 10px 7px 7px;
+    background-clip: padding-box;
+  }
+}
+@-webkit-keyframes finger-5-animation {
+  0% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  34% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  43% {
+    top: 20px;
+    right: 2px;
+    -webkit-border-radius: 0 8px 20px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 8px 20px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 8px 20px 0;
+    background-clip: padding-box;
+    transform: rotate(-12deg);
+  }
+  50% {
+    top: 20px;
+    right: 2px;
+    -webkit-border-radius: 0 8px 20px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 8px 20px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 8px 20px 0;
+    background-clip: padding-box;
+    transform: rotate(-12deg);
+  }
+  60% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+}
+@keyframes finger-5-animation {
+  0% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  34% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  43% {
+    top: 20px;
+    right: 2px;
+    -webkit-border-radius: 0 8px 20px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 8px 20px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 8px 20px 0;
+    background-clip: padding-box;
+    transform: rotate(-12deg);
+  }
+  50% {
+    top: 20px;
+    right: 2px;
+    -webkit-border-radius: 0 8px 20px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 8px 20px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 8px 20px 0;
+    background-clip: padding-box;
+    transform: rotate(-12deg);
+  }
+  60% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 32px;
+    right: 0;
+    -webkit-border-radius: 0 5px 14px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 5px 14px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 5px 14px 0;
+    background-clip: padding-box;
+    transform: rotate(0deg);
+  }
+}
