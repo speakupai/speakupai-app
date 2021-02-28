@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Speak Up AI</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- get jquery js lib from google host-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="particles-background" class="vertical-centered-box"></div>
+  <div id="particles-foreground" class="vertical-centered-box"></div>
+
+
+  <div class="upload">
+    <div class="upload-files">
+    <header>
+      <!-- <p>
+      <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+      <span class="up">up</span>
+      <span class="load">load</span>
+      </p> -->
+      <img src="../static/images/Speak Up Logo.png" >
+      <a href="https://speakupai.github.io"><i class="fa fa-github" style="font-size:36px; color:purple"></i></a>
+
+    </header>
+    <div class="body" id="drop">
+      <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+      <p class="pointer-none"><b>Drag and drop</b> a wav file here <br /> or <a href="" id="triggerFile">browse</a> to begin the upload</p>
+        <input type="file"/>
+    </div>
+    <footer>
+
+      <div class="divider">
+      <span id="span_message"></span>
+      <audio id="audio" controls>
+        <source src="" id="audio_player" />
+      </audio>
+      </div>
+
+      <div class="btn-container">
+        <button class="importar">Discard</button>
+        <button class="predict">Enhance</button>
+      </div>
+
+      <div class="loading">
+        <div class="finger finger-1">
+          <div class="finger-item">
+            <i></i>
+          </div>
+        </div>
+        <div class="finger finger-2">
+          <div class="finger-item">
+            <i></i>
+          </div>
+        </div>
+        <div class="finger finger-3">
+          <div class="finger-item">
+            <i></i>
+          </div>
+        </div>
+        <div class="finger finger-4">
+          <div class="finger-item">
+            <i></i>
+          </div>
+        </div>
+        <div class="last-finger">
+          <div class="last-finger-item"><i></i></div>
+        </div>
+        <span>Running Model Inference...</span>
+      </div>
+
+    </footer>
+    </div>
+  </div>
+  </div>
+    
+<script  src="../static/js/index.js"></script>
+
+</body>
+
+</html>
